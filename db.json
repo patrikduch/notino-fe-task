@@ -1,0 +1,7 @@
+{
+    "todos": [
+      { "id": "1", "title": "Go shopping", "description": "One bread, two limonades, garlic"},
+      { "id": "2", "title": "Job interview", "description": "Notino SW Engineering interview"},
+      { "id": "3", "title": "Prepare homework", "description": "Prepare Notino frontend task"}
+    ]
+  }

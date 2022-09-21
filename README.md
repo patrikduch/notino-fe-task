@@ -46,6 +46,14 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 
+## Third party libraries
+
+npm install -g json-server
+https://www.npmjs.com/package/json-server
+
+
+@mui/material - styling library
+
 
 ## Homework
 
@@ -53,8 +61,96 @@ Here is sample code that is not by far ideal.
 
 1. Refactor code to production-grade quality.
 2. Find and describe bugs and issues.
+mport React from "react";
+
+import Todo from './Todo';
+
+// never use var keyword => use let for variables and const for constants
+var todos = (): Promise<{id: string; title: string;}[]> => new Promise((res) => {
+  setTimeout(() => {
+    res([
+      {
+        id: "1",
+        title: "Go shopping",
+      },
+      {
+        id: "2",
+        title: "Job interview",
+      },
+      {
+        id: "3",
+        title: "Prepare homework",
+      },
+    ]);
+  }, 100);
+});
+
+// use arrow functions
+function App() {
+  const [state, setState] = React.useState<{ id: string; title: string }[]>([]);
+
+  React.useEffect(() => { // Incorrect fetching functionality, which creates infinite rendering cycle
+    (async () => {
+      var awaitedTodos = await todos();
+      for (var i = 0; i < awaitedTodos.length; i++) {
+        setState([...state, awaitedTodos[i]]);
+      }
+    })()
+  })
+
+  return (
+    <div>   ----  Unnecesarry div => use Fragment, every item of collection must have pseudo-random index
+      {state.map((todo) => (
+        <Todo todo={todo} />
+      ))}
+    </div>
+  );
+}
+
+export default App;
+
+
+
+import React from "react";
+
+class Todo extends React.Component<any> {  --  missing type specification... never use any, class libraries should be replaced by functional if we starts a brand new project
+	shouldComponentUpdate(prevProps: any) {
+	if(this.props != prevProps) {
+		return true;
+	}
+		return false;
+	}
+
+	handleOnClick() {
+		window.location.href = '/detail'
+	}
+
+	render() {
+
+	return ( 
+		<div>  
+			<div onClick={this.handleOnClick}>
+			{this.props.todo.title}
+			</div>
+		</div>
+	);
+	}
+}
+
+export default Todo;
+
+
+
 3. Add styling by your choice. (You can add styling library)
 4. Demonstrate connection to backend API.
 5. Add Todo detail page (add routing to app, use context api for state managment from fetch todos to render todos and detail)
+
+- for this usecase is better to use classic props drilling (React Context API is better for situation where there is long props chain with minimal rate change)
+
+
 6. Todo component has defined shouldComponentUpdate lifecycle, but it can be done better, adjust it
+
 7. Optional: rewrite Todo component to FC (choose if you want, prepare explanation)
+
+Class compomnents are not a good candidate for new component anymore
+Everything that class component were able to do in the past, FC can implement as well
