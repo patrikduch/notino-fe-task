@@ -55,6 +55,11 @@ https://www.npmjs.com/package/json-server
 @mui/material - styling library
 
 
+yarn package manager
+
+npm install --global yarn
+
+
 ## Homework
 
 Here is sample code that is not by far ideal.
