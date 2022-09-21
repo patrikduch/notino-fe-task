@@ -12,7 +12,6 @@ interface IProps {
 
 const TypographyStyled = styled(Typography)({
     marginTop: '1.5vh !important',
-    marginBottom: '1.5vh !important'
 });
 
 /**

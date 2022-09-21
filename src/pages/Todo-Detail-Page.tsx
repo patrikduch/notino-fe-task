@@ -32,6 +32,7 @@ const TodoDetailPage: React.FC = () => {
                 <ArrowBack />
             </ButtonStyled>
             <PageTitle text={`Detail of todo item #${passedTodo.id}`} />
+            <hr/>
             <TodoItemDetail todo={passedTodo} />
         </Container>
     );
