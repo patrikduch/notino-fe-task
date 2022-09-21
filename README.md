@@ -111,10 +111,7 @@ function App() {
 
 export default App;
 ```
-
-
-
-
+```bash
 import React from "react";
 
 class Todo extends React.Component<any> {  --  missing type specification... never use any, class libraries should be replaced by functional if we starts a brand new project
@@ -142,6 +139,10 @@ class Todo extends React.Component<any> {  --  missing type specification... nev
 }
 
 export default Todo;
+
+```
+
+
 
 
 
