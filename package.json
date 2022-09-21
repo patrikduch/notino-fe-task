@@ -55,6 +55,9 @@
   },
   "devDependencies": {
     "@types/uniqid": "^5.3.2",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "eslint": "^8.23.1",
     "i": "^0.3.7",
     "npm": "^8.19.2"
   }

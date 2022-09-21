@@ -64,14 +64,19 @@ json-server --watch db.json
 npm install -g json-server
 https://www.npmjs.com/package/json-server
 
-
-
 @mui/material - styling library
 
-
-yarn package manager
-
+### YARN
 npm install --global yarn
+
+
+### Eslint
+
+@typescript-eslint/parser
+@typescript-eslint/eslint-plugin eslint
+typescript
+
+https://typescript-eslint.io/docs/
 
 
 ## Homework

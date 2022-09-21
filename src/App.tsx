@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import {
   Route,
   Routes
-} from "react-router-dom";
-import Layout from "./components/skeleton/Layout";
-import TodoDetailPage from "./pages/Todo-Detail-Page";
-import TodoPage from "./pages/Todo-Page";
+} from 'react-router-dom';
+import Layout from './components/skeleton/Layout';
+import TodoDetailPage from './pages/Todo-Detail-Page';
+import TodoPage from './pages/Todo-Page';
 
 /**
  * @function App Entry component where all injection starts.
