@@ -61,7 +61,9 @@ Here is sample code that is not by far ideal.
 
 1. Refactor code to production-grade quality.
 2. Find and describe bugs and issues.
-mport React from "react";
+
+```bash
+import React from "react";
 
 import Todo from './Todo';
 
@@ -108,6 +110,8 @@ function App() {
 }
 
 export default App;
+```
+
 
 
 
