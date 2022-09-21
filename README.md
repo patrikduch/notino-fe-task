@@ -45,11 +45,25 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+## Development
+
+### Start Developoment Server
+
+```bash
+yarn start run
+```
+
+### Start JsonServer
+
+```bash
+json-server --watch db.json
+```
 
 ## Third party libraries
 
 npm install -g json-server
 https://www.npmjs.com/package/json-server
+
 
 
 @mui/material - styling library

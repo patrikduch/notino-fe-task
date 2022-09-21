@@ -3,7 +3,7 @@ import {
   Route,
   Routes
 } from "react-router-dom";
-import Layout from "./components/Layout";
+import Layout from "./components/skeleton/Layout";
 import TodoDetailPage from "./pages/Todo-Detail-Page";
 import TodoPage from "./pages/Todo-Page";
 
