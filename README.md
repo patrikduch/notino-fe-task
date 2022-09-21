@@ -158,5 +158,5 @@ export default Todo;
 
 7. Optional: rewrite Todo component to FC (choose if you want, prepare explanation)
 
-Class compomnents are not a good candidate for new component anymore
-Everything that class component were able to do in the past, FC can implement as well
+<b>Class compomnents are not a good candidate for new component anymore. </b>
+<b>Everything that class component were able to do in the past, FC can implement as well. </b>
