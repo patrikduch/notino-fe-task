@@ -150,8 +150,9 @@ export default Todo;
 4. Demonstrate connection to backend API.
 5. Add Todo detail page (add routing to app, use context api for state managment from fetch todos to render todos and detail)
 
-- for this usecase is better to use classic props drilling (React Context API is better for situation where there is long props chain with minimal rate change)
+<b>for this usecase is better to use classic props drilling (React Context API is better for situation where there is long props chain with minimal rate change)</b>
 
+<b>State management with React Context API shouldn't be used dogmatically.</b>
 
 6. Todo component has defined shouldComponentUpdate lifecycle, but it can be done better, adjust it
 
