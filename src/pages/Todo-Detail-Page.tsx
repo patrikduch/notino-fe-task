@@ -1,7 +1,8 @@
 import { ArrowBack } from '@mui/icons-material';
-import { Button, Container } from '@mui/material';
+import { Button, Container, styled } from '@mui/material';
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import PageTitle from '../components/common/Page-Title';
 import TodoItemDetail from '../components/todo/Todo-Item-Detail';
 import { TodoItemType } from '../components/todo/todo-types';
 
@@ -15,17 +16,22 @@ const TodoDetailPage: React.FC = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
+    const ButtonStyled = styled(Button)({
+        marginTop: '1.6vh'
+    });
+    
     const passedTodo : TodoItemType = {
         id: location.state.todo.id,
         title: location.state.todo.title,
-        description: ''
+        description: location.state.todo.description
     }
 
     return (
         <Container>
-            <Button variant="text" onClick={() => navigate("/")}>
+            <ButtonStyled variant="outlined" onClick={() => navigate("/")}>
                 <ArrowBack />
-            </Button>
+            </ButtonStyled>
+            <PageTitle text={`Detail of todo item #${passedTodo.id}`} />
             <TodoItemDetail todo={passedTodo} />
         </Container>
     );

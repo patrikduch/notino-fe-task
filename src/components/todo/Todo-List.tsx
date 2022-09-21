@@ -2,8 +2,10 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import uniqId from 'uniqid';
 import useDidMount from '../../hooks/dom/component.didmount.hook';
+import PageTitle from '../common/Page-Title';
 import Todo from './Todo-Item';
 import { TodoItemType} from './todo-types';
+
 
 /**
  * @function TodoList Rendering list of todos.
@@ -34,6 +36,8 @@ const TodoList: React.FC = () => {
   
     return (
       <>
+        <PageTitle text='List of todos' />
+
         { renderTodos() }
       </>
     );

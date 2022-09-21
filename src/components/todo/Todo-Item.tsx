@@ -31,7 +31,7 @@ const TodoItem: React.FC<IProps> = ( { todo }) => {
 
     return (
 		<TodoStyledContainer onClick={(() => handleOnClick(todo)) }>
-			<span>{todo.id}{'.'}{todo.title}</span>
+			<span>{todo.id}{'.'} {todo.title}</span>
 		</TodoStyledContainer>
 	);
 }
